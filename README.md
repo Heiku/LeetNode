@@ -1,0 +1,1 @@
+## Record LeetCode Solution Everyday
