@@ -15,6 +15,18 @@ import heiku.io.base.ListNode;
  * Output: 7 -> 0 -> 8
  * Explanation: 342 + 465 = 807.
  *
+ *
+ * create a node to record list head (result is a new list)
+ * loop l1 l2
+ *      get val and carry -> if carry != 0  record it
+ *      create node and record the val
+ *      change node pointer
+ *
+ *      note: if two list length is different, set 0 replace it
+ *
+ * final return res
+ *
+ *
  * @Author: Heiku
  * @Date: 2019/9/12
  */
