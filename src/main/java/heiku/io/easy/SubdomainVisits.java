@@ -51,7 +51,7 @@ public class SubdomainVisits {
 
             int index = str.indexOf(' ');
             int num = Integer.valueOf(str.substring(0, index));
-            String domain = str.substring(index);
+            String domain = str.substring(index + 1);
 
             for (int j = 0; j < domain.length(); j++){
                 if (domain.charAt(j) == '.'){
@@ -59,7 +59,7 @@ public class SubdomainVisits {
                     domainMap.put(d, domainMap.getOrDefault(d, 0) + num);
                 }
             }
-            domainMap.put(domain, num);
+            domainMap.put(domain, domainMap.getOrDefault(domain, 0) + num);
         }
 
         List<String> list = new ArrayList<>();
