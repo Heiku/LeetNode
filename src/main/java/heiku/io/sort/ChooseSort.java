@@ -12,11 +12,10 @@ public class ChooseSort {
         for (int i = 0; i < arr.length; i++){
             int idx = i;
             for (int j = i; j < arr.length; j++){
-                if (arr[j] < arr[idx]){
+                if (arr[idx] > arr[j]){
                     idx = j;
                 }
             }
-            // swap the number of idx and i
             swap(arr, idx, i);
         }
     }
