@@ -1,5 +1,7 @@
 package heiku.io.sort;
 
+import java.util.Arrays;
+
 /**
  * loop array, record the smallest number index in array, if number bigger them it, swap them
  *
@@ -29,9 +31,6 @@ public class ChooseSort {
     public static void main(String[] args) {
         int[] arr = {3,5,1,6,4,8,2};
         new ChooseSort().sort(arr);
-
-        for (int i : arr){
-            System.out.println(i + " ");
-        }
+        Arrays.stream(arr).forEach(e -> System.out.print(e + " "));
     }
 }

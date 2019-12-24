@@ -35,13 +35,9 @@ public class FlipAndInvertImage {
     // if head == tail, them head = tail = 1 ^ head
     // if head != tail, do not deal it
     public int[][] flipAndInvertImage(int[][] A) {
-
         for (int i = 0; i < A.length; i++){
-
             int lo = 0, hi = A[0].length - 1;
-
             while (lo <= hi){
-
                 if (A[i][lo] == A[i][hi]){
                     A[i][lo] = 1 - A[i][lo];
                     A[i][hi] = A[i][lo];
@@ -56,23 +52,16 @@ public class FlipAndInvertImage {
 
     // deal with stack
     public int[][] flipAndInvertImage2(int[][] A) {
-
         for (int i = 0; i < A.length; i++){
-
             Stack<Integer> stack = new Stack<>();
             for (int j = 0; j < A[0].length; j++){
                 stack.add(A[i][j]);
             }
-
             for (int j = 0; j < A[0].length; j++){
                 int k = stack.pop();
-
                 A[i][j] = 1- k;
             }
-
         }
-
-
         return A;
     }
 }

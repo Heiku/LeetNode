@@ -48,7 +48,7 @@ public class HammingDistance {
         int xor = x ^ y;
         int count = 0;
 
-        for (int i = 0;i < 32; i++){
+        for (int i = 0; i < 32; i++) {
             count += (xor >> i) & 1;
         }
 

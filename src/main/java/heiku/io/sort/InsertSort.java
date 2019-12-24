@@ -1,5 +1,7 @@
 package heiku.io.sort;
 
+import java.util.Arrays;
+
 /**
  * @Author: Heiku
  * @Date: 2019/11/15
@@ -25,9 +27,6 @@ public class InsertSort {
     public static void main(String[] args) {
         int[] arr = {3,5,1,6,4,8,2};
         new InsertSort().sort(arr);
-
-        for (int i : arr){
-            System.out.println(i + " ");
-        }
+        Arrays.stream(arr).forEach(e -> System.out.print(e + " "));
     }
 }

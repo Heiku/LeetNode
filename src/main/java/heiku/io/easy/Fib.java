@@ -87,7 +87,6 @@ public class Fib {
         if (N == 1){
             return 1;
         }
-
         return fib4(N - 1) + fib4(N - 2);
     }
 }

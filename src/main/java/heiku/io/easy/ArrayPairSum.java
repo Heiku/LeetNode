@@ -14,9 +14,6 @@ import java.util.Arrays;
  *
  *      Explanation: n is 2, and the maximum sum of pairs is 4 = min(1, 2) + min(3, 4).
  *
- *
- *
- *
  * @Author: Heiku
  * @Date: 2019/8/13
  */
