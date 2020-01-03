@@ -3,16 +3,18 @@ package heiku.io.sort;
 import java.util.Arrays;
 
 /**
+ * make sure the front of the array always
+ *
  * @Author: Heiku
  * @Date: 2019/11/15
  */
 public class InsertSort {
 
-    private void sort(int[] arr){
-        for (int i = 0; i < arr.length; i++){
+    public void sort(int[] arr){
+        for (int i = 1; i < arr.length; i++){
             for (int j = i; j > 0; j--){
                 if (arr[j] < arr[j - 1]){
-                    swap(arr, j, j - 1);
+                    swap(arr, j , j - 1);
                 }
             }
         }

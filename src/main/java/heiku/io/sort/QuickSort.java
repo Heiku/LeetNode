@@ -11,38 +11,35 @@ import java.util.Arrays;
  */
 public class QuickSort {
 
-    public void sort(int[] a, int lo, int hi){
+    public void sort(int[] arr, int lo, int hi){
         if (lo >= hi)
             return;
 
-        int j = partition(a, lo, hi);
-        sort(a, lo, j - 1);
-        sort(a, j + 1, hi);
+        int j = partition(arr, lo, hi);
+        sort(arr, lo, j - 1);
+        sort(arr, j + 1, hi);
     }
 
-    public int partition(int[] a, int lo, int hi){
-        int i = lo;
-        int j = hi + 1;
-        int v = a[lo];
+    public int partition(int[] arr, int lo, int hi){
+        int i = lo, j = hi, v = arr[lo];
 
         while (true){
-            while (a[++i] < v){
-                if (i >= hi)
-                    break;
+            while (i < hi && arr[i] <= v){
+                i++;
             }
-            while (a[--j] > v){
-                if (j <= lo)
-                    break;
+            while (j > lo && arr[j] >= v){
+                j--;
             }
             if (i >= j)
                 break;
-            swap(a, i, j);
+
+            swap(arr, i, j);
         }
-        swap(a, lo, j);
+        swap(arr, lo, j);
         return j;
     }
 
-    public void swap(int[] a, int i, int j){
+      public void swap(int[] a, int i, int j){
         int t = a[i];
         a[i] = a[j];
         a[j] = t;

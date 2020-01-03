@@ -48,6 +48,7 @@ public class Fib {
 
         int a = 0, b = 1;
 
+        // loop times, try take a while to consider it
         while (N-- > 1){
             int sum = a + b;
             a = b;
