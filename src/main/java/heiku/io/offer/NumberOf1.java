@@ -7,8 +7,18 @@ package heiku.io.offer;
  * @Date: 2020/1/3
  */
 public class NumberOf1 {
-    public int NumberOf1(int n) {
+    public int numberOf1(int n) {
+        int s = 0;
+        while (n != 0){
+            s++;
 
-        return 0;
+            // 1100 & (1011) = 1000 retain the 1 in number
+            n = n & (n -1);     // （n - 1）to remove the right 1 of number
+        }
+        return s;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new NumberOf1().numberOf1(5));
     }
 }
