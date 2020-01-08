@@ -1,5 +1,7 @@
 package heiku.io.easy;
 
+import heiku.io.base.TreeNode;
+
 /**
  * @Author: Heiku
  * @Date: 2019/8/8

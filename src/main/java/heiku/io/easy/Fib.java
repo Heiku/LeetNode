@@ -65,6 +65,8 @@ public class Fib {
      * Space complexity: O(n)
      *
      */
+
+    // use a array record the repeated calculate
     int[] fib_cache = new int[31];
     public int fib2(int N) {
         if(N <= 1)

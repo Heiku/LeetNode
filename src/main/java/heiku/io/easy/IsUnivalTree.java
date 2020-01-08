@@ -1,5 +1,7 @@
 package heiku.io.easy;
 
+import heiku.io.base.TreeNode;
+
 import java.util.HashSet;
 import java.util.Set;
 

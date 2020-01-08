@@ -3,7 +3,6 @@ package heiku.io.offer;
 import heiku.io.base.ListNode;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Stack;
 
 /**

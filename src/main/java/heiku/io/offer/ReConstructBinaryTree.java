@@ -1,6 +1,6 @@
 package heiku.io.offer;
 
-import heiku.io.easy.TreeNode;
+import heiku.io.base.TreeNode;
 
 import java.util.Arrays;
 

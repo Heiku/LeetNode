@@ -1,4 +1,4 @@
-package heiku.io.easy;
+package heiku.io.base;
 
 /**
  * @Author: Heiku

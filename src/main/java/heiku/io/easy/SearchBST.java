@@ -1,5 +1,7 @@
 package heiku.io.easy;
 
+import heiku.io.base.TreeNode;
+
 /**
  * 700. Search in a Binary Search Tree
  *
