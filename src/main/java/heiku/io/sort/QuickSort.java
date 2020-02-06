@@ -16,20 +16,22 @@ public class QuickSort {
             return;
 
         int j = partition(arr, lo, hi);
-        sort(arr, lo, j - 1);
+        sort(arr, lo, j);
         sort(arr, j + 1, hi);
     }
 
     public int partition(int[] arr, int lo, int hi){
-        int i = lo, j = hi, v = arr[lo];
+        int i = lo, j = hi + 1;
+        int v = arr[lo];
 
-        while (true){
-            while (i < hi && arr[i] <= v){
-                i++;
+        while (true) {
+            while (arr[++i] <= v && i < hi) {
+
             }
-            while (j > lo && arr[j] >= v){
-                j--;
+            while (arr[--j] >= v && j > lo) {
+
             }
+
             if (i >= j)
                 break;
 
@@ -39,7 +41,7 @@ public class QuickSort {
         return j;
     }
 
-      public void swap(int[] a, int i, int j){
+    public void swap(int[] a, int i, int j) {
         int t = a[i];
         a[i] = a[j];
         a[j] = t;
