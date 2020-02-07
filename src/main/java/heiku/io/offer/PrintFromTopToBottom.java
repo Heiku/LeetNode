@@ -13,7 +13,7 @@ import java.util.Queue;
  * @Date: 2020/1/20
  */
 public class PrintFromTopToBottom {
-    public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
+    public ArrayList<Integer> printFromTopToBottom(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<>();
         if (root == null){
             return list;
