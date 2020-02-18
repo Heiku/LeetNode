@@ -9,7 +9,7 @@ package heiku.io.offer;
 public class JumpFloor {
 
     // same with Fib
-    public int JumpFloor(int target) {
+    public int jumpFloor(int target) {
         if (target < 2){
             return target;
         }

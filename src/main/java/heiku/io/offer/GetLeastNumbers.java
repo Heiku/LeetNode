@@ -12,7 +12,7 @@ import java.util.PriorityQueue;
  * @Date: 2020/2/17
  */
 public class GetLeastNumbers {
-    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
+    public ArrayList<Integer> getLeastNumbers(int [] input, int k) {
         ArrayList<Integer> list = new ArrayList<>();
         int len = input.length;
         if (k > len || k == 0){

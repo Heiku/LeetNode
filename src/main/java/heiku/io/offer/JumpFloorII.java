@@ -7,13 +7,13 @@ package heiku.io.offer;
  * @Date: 2020/1/3
  */
 public class JumpFloorII {
-    public int JumpFloorII(int target) {
+    public int jumpFloorII(int target) {
         if (target <= 0) {
             return -1;
         } else if (target == 1) {
             return 1;
         } else {
-            return 2 * JumpFloorII(target - 1);
+            return 2 * jumpFloorII(target - 1);
         }
     }
 }

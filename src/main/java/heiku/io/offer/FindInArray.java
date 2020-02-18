@@ -10,7 +10,7 @@ package heiku.io.offer;
 public class FindInArray {
 
     // O(N * logN), every row as a array with binarySearch
-    public boolean Find(int target, int [][] array) {
+    public boolean find(int target, int [][] array) {
         for (int i = 0; i < array.length; i++){
             int lo = 0, hi = array[i].length - 1;
             while (lo <= hi){
@@ -27,10 +27,10 @@ public class FindInArray {
         return false;
     }
 
-    // from the right top find,
+    // from the top right find,
     // if num > target, col--
     // if num < target, row++
-    public boolean Find2(int target, int[][] array){
+    public boolean find2(int target, int[][] array){
         int row = 0, col = array[0].length - 1;
 
         while (row <= array.length - 1 && col >= 0){
