@@ -16,8 +16,8 @@ public class QuickSort {
             return;
         }
         int mid = partition(arr, lo, hi);
-        sort(arr, lo, mid);
-        sort(arr, mid + 1, hi);
+        sort(arr, lo, mid - 1);
+        sort(arr, mid + 1 , hi);
     }
 
     public int partition(int[] arr, int lo, int hi){
@@ -28,7 +28,7 @@ public class QuickSort {
                 i++;
             }
 
-            while (arr[j] >  v && j > lo){
+            while (arr[j] >=  v && j > lo){
                 j--;
             }
 
@@ -48,7 +48,7 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {3,5,1,6,4,8,2};
+        int[] arr = {3,5,2,1,6,3,4,8,2};
         new QuickSort().sort(arr, 0, arr.length - 1);
         Arrays.stream(arr).forEach(e -> System.out.print(e + " "));
     }
