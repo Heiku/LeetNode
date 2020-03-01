@@ -8,7 +8,7 @@ package heiku.io.offer;
  * @Date: 2020/1/3
  */
 public class Fibonacci {
-    public int Fibonacci2(int n){
+    public int fibonacci2(int n){
         if (n <= 1){
             return n;
         }
@@ -25,7 +25,7 @@ public class Fibonacci {
     }
 
     // bad
-    public int Fibonacci3(int n) {
+    public int fibonacci3(int n) {
         if (n == 0)
             return 0;
         if (n == 1)
