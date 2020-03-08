@@ -30,6 +30,6 @@ public class Fibonacci {
             return 0;
         if (n == 1)
             return 1;
-        return Fibonacci3(n - 1) + Fibonacci3(n - 2);
+        return fibonacci3(n - 1) + fibonacci3(n - 2);
     }
 }
