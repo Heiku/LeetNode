@@ -19,12 +19,7 @@ public class GetLeastNumbers {
             return list;
         }
 
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k, new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o2.compareTo(o1);
-            }
-        });
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k, (Comparator.reverseOrder()));
 
         for (int i = 0; i < len; i++){
             if (maxHeap.size() != k){

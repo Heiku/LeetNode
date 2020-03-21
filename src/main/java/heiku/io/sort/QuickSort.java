@@ -12,39 +12,34 @@ import java.util.Arrays;
 public class QuickSort {
 
     public void sort(int[] arr, int lo, int hi){
-        if (lo >= hi){
+        if (lo >= hi)
             return;
-        }
-        int mid = partition(arr, lo, hi);
-        sort(arr, lo, mid - 1);
-        sort(arr, mid + 1 , hi);
+        int j = partition(arr, lo, hi);
+        sort(arr, lo, j - 1);
+        sort(arr, j + 1, hi);
     }
 
     public int partition(int[] arr, int lo, int hi){
         int i = lo, j = hi;
         int v = arr[lo];
         while (true){
-            while (arr[i] <= v && i < hi){
+            while (arr[i] <= v && i < hi)
                 i++;
-            }
-
-            while (arr[j] >=  v && j > lo){
+            while (arr[j] >= v && j > lo)
                 j--;
-            }
-
-            if (i >= j){
+            if (i >= j)
                 break;
-            }
+
             swap(arr, i, j);
         }
         swap(arr, lo, j);
         return j;
     }
 
-    public void swap(int[] a, int i, int j) {
-        int t = a[i];
-        a[i] = a[j];
-        a[j] = t;
+    public void swap(int[] arr, int lo, int hi){
+        int tmp = arr[lo];
+        arr[lo] = arr[hi];
+        arr[hi] = tmp;
     }
 
     public static void main(String[] args) {
