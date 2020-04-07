@@ -21,6 +21,9 @@ public class GetLeastNumbers {
 
         PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k, (Comparator.reverseOrder()));
 
+        // use a max heap, when we peek the element, the element is the biggest num in heap
+        // so we can compare the other num with the heap top, if other num smaller than heap top, replace it.
+        // in final, we can get the smallest n
         for (int i = 0; i < len; i++){
             if (maxHeap.size() != k){
                 maxHeap.offer(input[i]);
@@ -34,5 +37,9 @@ public class GetLeastNumbers {
             list.add(maxHeap.poll());
         }
         return list;
+    }
+
+    public static void main(String[] args) {
+        new GetLeastNumbers().getLeastNumbers(new int[]{4,5,1,6,2,7,3,8}, 4);
     }
 }

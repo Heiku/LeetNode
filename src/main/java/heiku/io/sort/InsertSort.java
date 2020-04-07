@@ -3,7 +3,7 @@ package heiku.io.sort;
 import java.util.Arrays;
 
 /**
- * make sure the front of the array always
+ * make sure the front of the array always sorted.
  *
  * @Author: Heiku
  * @Date: 2019/11/15

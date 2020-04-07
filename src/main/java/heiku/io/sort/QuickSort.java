@@ -23,13 +23,14 @@ public class QuickSort {
         int i = lo, j = hi;
         int v = arr[lo];
         while (true){
-            while (arr[i] <= v && i < hi)
+            while (i < hi && arr[i] <= v){
                 i++;
-            while (arr[j] >= v && j > lo)
+            }
+            while (j > lo && arr[j] >= v){
                 j--;
+            }
             if (i >= j)
                 break;
-
             swap(arr, i, j);
         }
         swap(arr, lo, j);

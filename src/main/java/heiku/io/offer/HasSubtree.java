@@ -18,7 +18,7 @@ public class HasSubtree {
             if (root1.val == root2.val) {
                 result = isSubTree(root1, root2);
             }
-            // find the same value node
+            // find the same value root node
             if (!result) {
                 result = hasSubtree(root1.left, root2);
             }
