@@ -42,12 +42,38 @@ public class LongestPalindrome {
         int n = s.length();
         boolean[][] dp = new boolean[n][n];
         String res = "";
-        
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j <= i; j++){
+                // j+1 > i-1
+                // consider the "bb"
+                dp[j][i] = ((j + 1 > i - 1) || dp[j+1][i-1]) && s.charAt(j) == s.charAt(j);
+                if (dp[j][i] && j - i + 1 > res.length()){
+                    res = s.substring(j, i + 1);
+                }
+            }
+        }
+        return res;
     }
 
-
     public String longestPalindrome2(String s) {
+        int len = 0;
+        int start = 0;
+        for (int i = 0; i < s.length(); i++){
+            int cur = Math.max(getLen(s, i, i), getLen(s, i, i+1));
+            if (cur > len){
+                len = cur;
+                start = i - (cur - 1) / 2;
+            }
+        }
+        return s.substring(start, start + len);
+    }
 
+    private int getLen(String s, int l, int r){
+        while (l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){
+            l--;
+            r++;
+        }
+        return r - l - 1;
     }
 
     public static void main(String[] args) {
