@@ -44,8 +44,8 @@ public class LongestPalindrome {
         String res = "";
         for (int i = 0; i < n; i++){
             for (int j = 0; j <= i; j++){
-                // j+1 > i-1
-                // consider the "bb"
+                // j+1 > i-1  init the dp base state
+                // consider the "b" or "bb"
                 dp[j][i] = ((j + 1 > i - 1) || dp[j+1][i-1]) && s.charAt(j) == s.charAt(j);
                 if (dp[j][i] && j - i + 1 > res.length()){
                     res = s.substring(j, i + 1);
