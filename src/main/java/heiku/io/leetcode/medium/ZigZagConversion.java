@@ -35,6 +35,30 @@ package heiku.io.leetcode.medium;
  **/
 public class ZigZagConversion {
     public String convert(String s, int numRows) {
-        
+        if (numRows <= 1){
+            return s;
+        }
+        int len = s.length();
+        int k = 0;
+        StringBuilder[] builders = new StringBuilder[numRows];
+        for (int i = 0; i < builders.length; i++) {
+            builders[i] = new StringBuilder();
+        }
+        while (k < len) {
+            for (int i = 0; i < numRows && k < len; i++) {
+                builders[i].append(s.charAt(k++));
+            }
+            for (int i = numRows - 2; i > 0 && k < len; i--) {
+                builders[i].append(s.charAt(k++));
+            }
+        }
+        for (int i = 1; i < builders.length; i++){
+            builders[0].append(builders[i]);
+        }
+        return builders[0].toString();
+    }
+
+    public static void main(String[] args) {
+        new ZigZagConversion().convert("PAYPALISHIRING", 3);
     }
 }
