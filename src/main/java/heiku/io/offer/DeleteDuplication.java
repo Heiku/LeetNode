@@ -15,15 +15,15 @@ public class DeleteDuplication {
 
         ListNode p = pHead;
         ListNode last = root;
-        while (p != null && p.next != null){
-            if (p.val == p.next.val){
+        while (p != null && p.next != null) {
+            if (p.val == p.next.val) {
                 int val = p.val;
-                while (p != null && p.val == val){
+                while (p != null && p.val == val) {
                     p = p.next;
                 }
                 // now p is next unique node
                 last.next = p;
-            }else {
+            } else {
                 last = p;
                 p = p.next;
             }

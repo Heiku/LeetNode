@@ -14,7 +14,7 @@ public class BubbleSort {
     public void sort(int[] arr){
         for (int i = 0; i < arr.length; i++) {
             // arr.length - i, the last number of i is sorted
-            for (int j = 1; j < arr.length - i; j++){
+            for (int j = 1; j < arr.length; j++){
                 if (arr[j - 1] > arr[j]){
                     swap(arr, j - 1, j);
                 }
