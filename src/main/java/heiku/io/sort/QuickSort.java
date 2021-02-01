@@ -14,22 +14,22 @@ import java.util.Random;
  */
 public class QuickSort {
 
-    public static void sort(int[] arr, int lo, int hi) {
+    private static void sort(int[] arr, int lo, int hi) {
         if (lo >= hi) {
             return;
         }
-        int j = partition(arr, lo, hi);
-        sort(arr, lo, j - 1);
-        sort(arr, j + 1, hi);
+        int mid = partition(arr, lo, hi);
+        sort(arr, lo, mid - 1);
+        sort(arr, mid + 1, hi);
     }
 
-    public static int partition(int[] arr, int lo, int hi) {
+    private static int partition(int[]arr, int lo, int hi) {
         int i = lo, j = hi, v = arr[lo];
         while (true) {
-            while (i < hi && arr[i] <= v) {
+            while (arr[i] <= v && i < hi) {
                 i++;
             }
-            while (j > lo && arr[j] >= v) {
+            while (arr[j] > v && j > lo) {
                 j--;
             }
             if (i >= j) {
@@ -41,10 +41,10 @@ public class QuickSort {
         return j;
     }
 
-    public static void swap(int[] arr, int lo, int hi) {
-        int tmp = arr[lo];
-        arr[lo] = arr[hi];
-        arr[hi] = tmp;
+    private static void swap(int[] arr, int i, int j) {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
     }
 
     public static void main(String[] args) {
